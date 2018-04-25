@@ -1,0 +1,1105 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px; padding:0px;}
+a:hover, a:focus{text-decoration:none; }
+a{outline:none;}
+
+
+body{ font-family: 'Open Sans', sans-serif; font-size: 1.6rem; color:#666; line-height:1.625;}
+ul{list-style:none; margin:0px; padding:0px;}
+img{max-width:100%;}
+.banner, .service, .service-description-bg, .health-dedication-wrapper-bg, .testimonial-wrapper, .map-wrapper, #header, #footer, #nav, .footer, .sidenav, .inner-header, .site-wrapper{width:100%; float:left;}
+
+/**********************header***************************/
+#header{
+	border-top:4px solid #b0d767;
+	padding:10px 0 0 0;
+}
+.contact-info, .header-social-icon, .header-social-icon li {
+  display: inline-block;
+}
+.contact-info{
+	text-align:right;
+}
+.contact-info  li{
+	color:#3abaec;
+	font-weight:600;
+}
+.circle{
+	height:49px;
+	width:49px;
+	line-height:49px;
+	text-align:center;
+	border-radius:100%;
+	border:2px solid #b0d767;
+	color:#b0d767;
+}
+
+.header-social-icon {
+  margin-left:24px;
+  vertical-align:top;
+}
+.header-social-icon > li:first-child {
+  margin-right: 10px;
+}
+
+.header-social-icon > li:hover .circle {
+  border-color: #5f6674;
+  color: #5f6674;
+}
+
+/**********************end of header***************************/
+
+/**********************nav***************************/
+#nav{
+	background-color:#5f6674;
+}
+#nav .navbar-nav {
+  float: none;
+  text-align:center;
+}
+#nav .navbar-nav > li {
+  float: none;
+  display:inline-block;
+  margin-right:62px;
+}
+#nav .navbar-nav > li:last-child {
+  margin-right:0;
+}
+.main-nav .nav .open > a, .main-nav .nav .open > a:focus, .main-nav .nav .open > a:hover {
+  background-color: transparent;
+  border:none;
+}
+.main-nav .navbar-nav > li > a {
+	color:#fff;
+	font-weight:600;
+	padding:12px 15px !important;
+	transition:all ease-in-out .2s;
+	position:relative;
+}
+.main-nav .navbar-nav > li > a:hover {
+	color:#b0d767;
+}
+.main-nav .navbar-nav > li > a {
+	color:#fff;
+	font-weight:600;
+	padding:12px 15px !important;
+}
+.main-nav .nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+}
+.main-nav .navbar-nav > li.active > a {
+	color:#b0d767;
+}
+.main-nav .navbar-nav > li.active > a:after {
+	position:absolute;
+	content:"";
+	width:100%;
+	left:0;
+	right:0;
+	border-bottom:3px solid #3abaec;
+	bottom:1px;
+}
+#nav #main-nav .sub-menu {
+  width: 200px;
+  border:none;
+  box-shadow:none;
+  padding:0;
+}
+#nav #main-nav .sub-menu a {
+  background-color: #5f6674;
+  border-color: currentcolor #b0d767 transparent;
+  border-style: none solid solid;
+  border-width: medium 2px 2px;
+  font-size: 1.4rem;
+  padding: 1.6rem 2rem;
+  position: relative;
+  text-align: left;
+  width: 200px;
+  white-space:normal;
+  color:#fff;
+  transition:all ease-in-out .2s;
+}
+#nav #main-nav .sub-menu a:hover {
+  color: #b0d767;
+
+}
+#nav.nav {
+  position: fixed;
+  z-index: 18;
+}
+.dropdown-menu.sub-menu > li {
+  margin-bottom: -2px;
+}
+/**********************end of nav***************************/
+/**************sidebar****************************************/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 16;
+    top: 0;
+    left: 0;
+    background-color: #a1cc3a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+	
+}
+
+.sidenav ul li a {
+    padding: 13px 0 10px 40px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+	font-weight:600;
+	border-bottom:1px solid #ccc;
+}
+
+.sidenav a:hover {
+    color: #ccc;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 4%;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+	color:#222;
+}
+.sidenav .closebtn:hover {
+    color: #fff;
+}
+.mobile-nav-btn {
+  color: #a1cc3a;
+  cursor: pointer;
+  display:block;
+  font-size: 30px;
+  position: fixed;
+  width: 5%;
+  z-index: 15;
+  top:4%;
+  left:4%;
+  display:none;
+}
+.mobile-nav-btn:hover {
+  color:#222;
+}
+.sidenav > ul > li.has-submenu{
+position:relative;
+}
+.sidenav > ul > li.has-submenu:before{
+  position:absolute;
+  font-family: "icomoon";
+  font-size: 14px;
+  padding-right: 6px;
+  content: "\f067";
+  left:15px;
+  top:15px;
+  color:#fff;
+  cursor:pointer;
+}
+.sidenav > ul > li.has-submenu ul{
+	display:none;
+	transition:all ease-in-out .2s;
+}
+
+.sidenav > ul > li.has-submenu.has-submenu-clicked ul{
+	display:block;
+}
+.sidenav > ul > li.has-submenu.has-submenu-clicked:before{
+  content: "\f068";
+}
+
+.mobile-call {
+  color: #a1cc3a;
+  cursor: pointer;
+  font-size: 30px;
+  position: fixed;
+  right: 4%;
+  top: 4%;
+  width: 5%;
+  z-index: 15;
+  display:none;
+}
+
+/**************end of sidebar****************************************/
+/******************mobile call button*******************************/
+.sidecall {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 16;
+    top: 0;
+    right: 0;
+    background-color: #a1cc3a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sidecall ul {
+	margin-top:50px;
+}
+.sidecall li {
+	margin:20px;
+	text-align:center;
+}
+.sidecall li a {
+    padding:20px 10px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #a1cc3a;
+    display: block;
+    transition: 0.3s;
+	background-color:#fff;
+	font-weight:600;
+	text-transform:uppercase;
+}
+
+.sidecall a:hover {
+    color: #f1f1f1;
+}
+.sidecall .closebtn {
+  color: #222;
+  font-size: 36px;
+  margin-left: 50px;
+  position: absolute;
+  right: 25px;
+  top: 4%;
+}
+
+
+/******************end of mobile call button*************************/
+/**********************banner***************************/
+.banner{
+	padding: 7rem 0;
+	background: rgba(0, 0, 0, 0) url("images/nadiu30.jpg") no-repeat scroll center top / cover ;
+}
+.banner-text-wrapper {
+  color: #fff;
+  max-width: 60%;
+  padding:0 0 0 4rem;
+  float:right;
+}
+.banner-text-wrapper h5 {
+  font-size: 4rem;
+  line-height: 1;
+  font-family: 'Playfair Display', serif;
+  color:#fff;
+  margin:0;
+}
+.banner-text-wrapper h2{
+  font-size: 6rem;
+  font-family: 'Playfair Display', serif;
+  line-height:58px;
+  color:#fff;
+  position:relative;
+  margin:0;
+}
+.banner-text-wrapper h2::after {
+  background-color: #fff;
+  bottom: -28px;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 81px;
+}
+.banner-text-wrapper p{
+	margin-top:50px;
+	color:#fff;
+}
+.request-btn {
+  display:inline-block;
+  margin-top:50px;
+}
+.request-btn a {
+  background-color: #5f6674;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 28px;
+  display:block;
+  text-transform:uppercase;
+}
+.request-btn a:hover {
+  color: #9db7d1;
+}
+.banner-text-wrapper{
+	opacity:0;
+	transition:all ease-in-out 1s;
+}
+
+/**********************end of banner***************************/
+
+/**********************service***************************/
+.service {
+  background: #efefef none repeat scroll 0 0;
+  padding: 7rem 0;
+}
+.service-listing{
+	text-align:center;
+}
+.service-listing > li {
+  display: inline-block;
+  position: relative;
+  width:auto;
+}
+.service-listing > li:last-child {
+  margin-right: 0px;
+}
+.service-listing a {
+  display: block;
+  text-align: center;
+  position:relative;
+  transition:all ease-in-out .2s;
+}
+.service-img {
+  display: block;
+  position:relative;
+}
+.service-listing a{
+	position:relative;
+}
+.service-listing a {
+  left: 0;
+  margin: -26px auto 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  font-family: 'Playfair Display', serif;
+  color:#fff;
+  font-weight:bold;
+  line-height:21px;
+  transition:all ease-in-out .2s;
+  z-index:10;
+}
+.service-border {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 89%;
+  left: 6%;
+  position: absolute;
+  text-align: center;
+  top: 6%;
+  transition: all 0.7s ease 0s;
+  width: 89%;
+  z-index: 10;
+}
+.service-listing li:hover .service-border {
+	border: 2px solid #3abaec;
+}
+.service-listing .service-text:hover{
+	color:#3abaec;
+}
+
+
+/**********************end of service***************************/
+
+/**********************service-description***************************/
+.service-description-bg {
+  background: #efefef none repeat scroll 0 0;
+  padding:0 0 7rem 0;
+}
+.service-description h1 {
+  color: #3abaec;
+  font-family: "Playfair Display",serif;
+  font-size: 3.6rem;
+  font-weight: normal;
+  text-align:center;
+  margin-top:0;
+  margin-bottom:20px;
+}
+.service-description {
+  border: 2px solid #b0d767;
+  padding: 3% 10%;
+}
+.service-description-wrapper {
+  background: #fff none repeat scroll 0 0;
+  padding: 20px;
+}
+.service-description li {
+  display: inline-block;
+  padding-right: 30px;
+  text-align: justify;
+  vertical-align: top;
+  width: 100%;
+}
+.service-description li:last-child {
+	padding-right:0px;
+}
+.container-wrap {
+  margin: 0 auto;
+  max-width: 100%;
+  display:table;
+}
+
+/**********************end of service-description***************************/
+
+/**********************health-dedication-wrapper***************************/
+.health-dedication-wrapper-bg {
+  background: #fff none repeat scroll 0 0;
+  padding: 35px 0;
+}
+.health-dedication-wrapper {
+  background: rgba(0, 0, 0, 0) url("images/nadiu20.jpg") no-repeat scroll center center / cover ;
+}
+.health-dedication-wrapper .container-health {
+  width: 100%;
+  margin:0 auto;
+  display:table;
+}
+.container-health-description {
+  color: #fff;
+  float: right;
+  max-width: 50%;
+  padding: 3% 0 3% 8%;
+}
+.health-dedication-wrapper h6 {
+  font-size: 25px;
+  padding-bottom: 5px;
+  font-family: 'Playfair Display', serif;
+}
+.health-dedication-wrapper p {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+.circle-angle-right {
+  border: 2px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  height: 35px;
+  line-height: 33px;
+  text-align: center;
+  width: 35px;
+}
+.meet-dr-button > a {
+  color: #fff;
+  display: inline-block;
+  font-weight:600;
+}
+.meet-dr-button:hover > a {
+  color: #5f6674;
+}
+.meet-dr-button a:hover .circle-angle-right {
+  color: #5f6674;
+  border-color:#5f6674;
+}
+
+
+/**********************end of health-dedication-wrapper***************************/
+
+
+/***********************block7************************/
+.testimonial-wrapper {
+  background: rgba(0, 0, 0, 0) url("images/beach_bg2.jpg") no-repeat scroll center top / cover ;
+  color: #333333;
+  padding: 7rem 0 16rem 0;
+  text-align: center;
+}
+.testimonials-title {
+  padding-bottom: 6rem;
+  font-size: 32px;
+  font-family: 'Playfair Display', serif;
+}
+.test-icon {
+  background: rgba(0, 0, 0, 0) url("images/quote_letter_bg1.png") no-repeat scroll center top;
+  color: #ffffff;
+  float: left;
+  font-size: 40px;
+  height: 115px;
+  padding-right: 7px;
+  padding-top: 29px;
+  text-transform: capitalize;
+  vertical-align: middle;
+  width: 115px;
+}
+.test-text {
+  float: right;
+  text-align: left;
+  width: 66%;
+}
+.testimonial-container {
+  margin: 0 auto;
+  width: 60%;
+}
+.test-quote {
+  color: #1e1e1e;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: left;
+}
+.testimonial-name {
+  color: #0e0e0e;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+/***********************end of block7************************/
+
+/******************** map-wrapper****************************/
+.map-wrapper {
+  background: rgba(0, 0, 0, 0) url("images/NaiduMap002b.jpg") no-repeat scroll center center / cover ;
+  padding-bottom: 80px;
+  padding-top: 35px;
+  text-align: center;
+}
+.map-wrapper .map-wrap {
+  background: rgb(255, 255, 255) none repeat scroll 0 0;
+  border: 1px solid #009d97;
+  margin: 0 auto;
+  max-width: 350px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.map-wrapper .map-inner {
+  margin: 18px auto;
+  max-width: 350px;
+  padding: 30px 20px;
+}
+.map-wrapper .map-head {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+#map-pop-up {
+  background-color: #3abaec;
+  border: medium none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 1.6rem 2.4rem;
+  text-transform: uppercase;
+  width: auto;
+}
+.map-wrapper .map-hours {
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+.map-wrapper .map-num {
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+}
+.map-wrapper .map-num p {
+  margin-bottom: 8px;
+}
+.map-wrapper .request-appoint button {
+  padding: 16px 40px;
+  background-color: #3abaec;
+  border: medium none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 1.6rem 2.4rem;
+  text-transform: uppercase;
+  width: auto;
+}
+.map-wrapper .modal-content {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  max-height:510px;
+}
+.map-wrapper .map-wrap iframe{
+	width:600px;
+	height:450px;
+}
+.map-wrapper .map-wrap .modal-body p {
+	text-align:left;
+}
+.map-wrapper .close {
+  color: #488cfd;
+  font-size: 30px;
+  opacity: 1;
+}
+.map-wrapper .modal-header {
+  border-bottom: 0 none;
+  position: absolute;
+  right: 0;
+  z-index:5;
+}
+.fade {
+  opacity: 0;
+  transition: opacity .5s linear 0s;
+}
+.map-wrapper #map-pop-up:hover {
+  color: #9db7d1;
+}
+/********************end of map-wrapper****************************/
+
+
+/*******************************footer*****************************************/
+.footer {
+  background: rgba(0, 0, 0, 0) url("images/footer_bg2.jpg") no-repeat scroll 0 0 / cover ;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem 0 2rem;
+  text-align: center;
+}
+.footer ul li a {
+  border: medium none;
+  color: #fff;
+  display: block;
+  padding: 10px 15px 7px;
+  position: relative;
+  display:inline-block;
+  font-weight:600;
+}
+.footer ul li:first-child{
+	margin-bottom:10px;
+}
+/*********************end of footer******************************/
+/*************inner page***************/
+.inner-header {
+  background: rgba(0, 0, 0, 0) url("images/inner_header_bg2.jpg") no-repeat scroll center top / cover ;
+  margin: 0;
+  position: relative;
+}
+.inner-page-banner {
+  color: #fff;
+  float: right;
+  font-style: italic;
+  line-height: 1;
+  padding: 8%;
+  width: 50%;
+}
+.inner-page-banner-description {
+  font-size: 32px;
+  font-family: "Playfair Display",serif;
+}
+.content-area {
+  margin: 0 auto;
+  max-width: 1140px;
+  padding-top:4rem;
+}
+.content {
+  width: 100%;
+}
+
+.content {
+  background-color: #fff;
+  margin-bottom: 4rem;
+
+}
+.content-title {
+  color: #5f6674;
+  font-size: 3.6rem;
+  line-height: 1;
+  font-family: "Playfair Display",serif;
+  margin:0 0 1.6rem;
+}
+img.alignleft {
+  margin: 0 2.4rem 2.4rem 0;
+}
+.img-fl {
+  float: left;
+  text-align: left;
+}
+.entry-content h2{
+  color: #366a9f;
+  font-family: "Playfair Display",serif;
+  font-size: 1.8rem;
+  line-height: 1;
+  margin:0 0 1.6rem;
+  font-weight:600;
+}
+
+.content-sidebar-wrap {
+  width: 100%;
+  text-align:center;
+  color:#999;
+}
+.sidebar-pdg {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+#sidebar-box1 {
+  border: 2px solid #dddddd;
+  margin-top: 0;
+  padding: 1rem;
+}
+.side-boxes h3 {
+  font-family: "Playfair Display",serif;
+  font-size: 2.7rem;
+  font-weight: 200;
+  color:#333;
+  margin-top:0;
+}
+
+#sidebar-box1 hr {
+  background-color: #3abaec;
+  border: medium none;
+  height: 3px;
+  margin: 0 auto;
+  width: 40%;
+}
+.content-sidebar-wrap p:last-child {
+  margin-bottom: 0;
+}
+#sidebar-box1 #sidear-top-address {
+  font-size: 1.5rem;
+  padding: 2rem 0;
+}
+#sidebar-box1 #sidear-top-num01 {
+  color: #3abaec;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+.exist-pat-num {
+  display: block;
+}
+#sidebar-box1 #sidear-top-num02 {
+  color: #3abaec;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1rem 0;
+}
+#sidebar-box2 {
+  background-color: #3abaec;
+  color: #ffffff;
+  padding: 3rem 1rem;
+}
+.side-boxes {
+  margin: 3rem 0;
+}
+#sidebar-box2 h3 {
+  color: #ffffff;
+}
+#sidebar-box2 #sidebar-box2-button {
+  background-color: #5f6674;
+  display: block;
+  margin: auto;
+  max-width: 75%;
+  padding: 5px;
+}
+#sidebar-box2 #sidebar-box2-button a {
+  color: #fff;
+}
+#sidebar-box3 {
+  border: 2px solid #dddddd;
+  padding: 2rem;
+}
+#sidebar-box3 img {
+  margin-top: 2rem;
+}
+#sidebar-box3 .side-strong {
+  font-weight: 600;
+  font-family: "Playfair Display",serif;
+}
+/*************end of inner page***************/
+
+
+
+@media (max-width: 991px) {
+	
+.header-left {
+  text-align: center;
+}
+.header-right {
+  margin-bottom: 17px;
+  text-align: center;
+}	
+.service-description li {
+  margin-bottom: 30px;
+}
+.container-health-description {
+  float: none;
+  margin:0 auto;
+  padding:10%;
+  max-width:60%;
+}
+nav#nav{
+	display:none;
+}
+#header {
+  background-color: #fff;
+  border-top: 4px solid #b0d767;
+  left: 0;
+  padding: 10px 0 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+.inner-header, .banner {
+  margin-top: 206px;
+}
+.mobile-nav-btn {
+  display:block;
+}
+.mobile-call {
+  display:block;
+}	
+}
+
+
+
+
+/****************************/
+
+
+
+
+@media (max-width: 1199px) {
+  
+	
+}
+
+
+
+
+/****************************/
+
+
+
+@media (min-width: 768px) {
+.banner-text-wrapper {
+  max-width: 60%;
+
+}
+.service-listing > li {
+  width:18%;
+   margin-right: 6px;
+}
+.service-listing a {
+  line-height:21px;
+  font-size:12px;
+}
+.test-icon {
+  margin-right:30px;
+}
+.map-wrapper .map-wrap iframe{
+	width:444px;
+	height:450px;
+}
+.meet-dr-button {
+  margin-top: 20px;
+}
+.content {
+  padding: 0;
+}
+.site-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+}
+
+
+
+@media (min-width: 992px) {
+.header-right {
+  margin-top:35px;
+}
+#nav .navbar-nav > li {
+  margin-right:28px;
+}
+.banner{
+	background: rgba(0, 0, 0, 0) url("images/nadiu30.jpg") no-repeat scroll center top / cover ;
+	padding:0;
+}
+.banner-text-wrapper {
+  max-width: 50%;
+  padding: 10% 8% 8% 4%;
+}
+
+.service-listing > li {
+  width:16%;
+   margin-right: 34px;
+}
+.health-dedication-wrapper {
+  background: rgba(0, 0, 0, 0) url("images/nadiu10.jpg") no-repeat scroll left center / cover ;
+}
+.health-dedication-wrapper .container-health {
+  padding-right:5%;
+  padding-left:5%;
+}
+.container-health-description {
+  padding:5% 0;
+}
+
+
+.test-text {
+  width: 74%;
+}
+.banner-text-wrapper h2{
+  font-size: 7rem;
+  line-height:67px;
+}
+.banner-text-wrapper {
+  max-width: 40%;
+}
+.service-description li {
+  padding-right: 30px;
+  width: 48%;
+}
+.service-listing a {
+  font-size:16px;
+}
+.map-wrapper .map-wrap iframe{
+	width:600px;
+	height:450px;
+}
+
+}
+
+@media (min-width: 1200px) {
+#nav .navbar-nav > li {
+  margin-right:62px;
+}
+.banner{
+	background: rgba(0, 0, 0, 0) url("images/banner-bg.jpg") no-repeat scroll center top / cover ;
+	padding: 7rem 0;
+}
+.banner-text-wrapper {
+  max-width: 40%;
+  padding: 6% 3% 7% 0;
+}
+.request-btn {
+  margin-top:20px;
+}
+.service-listing > li {
+  width:auto;
+}
+.health-dedication-wrapper {
+  background: rgba(0, 0, 0, 0) url("images/health_bg2.jpg") no-repeat scroll center center / cover ;
+}
+.health-dedication-wrapper .container-health {
+  padding-right:0;
+  padding-left:0;
+}
+.container-health-description {
+  padding: 3% 0 3% 8%;
+}
+.testimonial-container {
+  width: 83.3333%;
+}
+.test-icon {
+  margin-right:0px;
+}
+.test-text {
+  width: 72%;
+}
+.health-dedication-wrapper .container-health {
+  max-width: 1300px;
+  margin:0 auto;
+}
+.container-wrap {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.content {
+  float: left;
+  width: 820px;
+}
+.content {
+  padding: 4rem 4rem 2.4rem;
+}
+.content-sidebar-wrap {
+  float: right;
+  width: 300px;
+}
+.sidebar-pdg {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+}
+
+
+
+
+@media (max-width: 767px) {
+.banner-text-wrapper h5 {
+  font-size: 20px;
+}
+.banner-text-wrapper h2 {
+  font-size: 25px;
+  line-height: 29px;
+}
+.banner-text-wrapper h2::after {
+  left: auto;
+  right: 3px;
+
+}
+.request-btn a {
+  padding: 9px 18px;
+}
+.request-btn {
+  text-align: center;
+}
+.banner-text-wrapper {
+  text-align: right;
+}
+.banner {
+  background: rgba(0, 0, 0, 0) url("images/nadiu30.jpg") no-repeat scroll left 22% top / cover ;
+  padding: 2rem 0;
+}
+.service-listing > li {
+  margin-bottom: 15px;
+}
+.service-description li {
+  padding-right: 0;
+}
+.container-health-description {
+  max-width: 66%;
+}
+.health-dedication-wrapper h6 {
+  line-height: 35px;
+}
+.test-icon {
+  float: none;
+  margin:0 auto;
+}
+.test-text {
+  float: none;
+  width: 100%;
+}
+.map-wrapper .map-wrap iframe {
+  height: 100%;
+  width: 89%;
+}
+.banner {
+  margin-top: 153px;
+}
+
+.mobile-nav-btn {
+  top: 40%;
+}
+.mobile-call {
+  top: 40%;
+}	
+.site-wrapper {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.inner-page-banner-description {
+  font-size: 18px;
+}
+
+}
+
+@media (max-width: 320px) {
+.mobile-nav-btn {
+  top: 17%;
+}
+.mobile-call {
+  right: 10%;
+  top: 17%;
+}
+	
+}
+

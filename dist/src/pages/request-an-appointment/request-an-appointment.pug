@@ -1,0 +1,174 @@
+.page-request-an-appointment
+  Loader(v-if='loading')
+  section.inner-header
+   .inner-page-banner.inner-page-banner-description Quality dental care can transform your life.
+   .clearfix
+  section.site-wrapper
+  main.content-area
+    .content
+      article
+        h1.content-title Request an Appointment
+        .entry-content
+          p
+            | Thank you for your interest in Naidu Dental. Please fill out the form below and one of our staff members will set up a date and time convenient for you.
+          p
+            | We take measures to ensure that your privacy is protected. Please read our 
+            a(href='#') privacy policy
+            |  for more information.
+          form.request-form(action='#')
+            ul
+              li
+                .form-group
+                  label(for='')
+                    | Name 
+                    span.star *
+                  input.form-control(type='', id='', placeholder='', name='')
+                  span.name-suffix First
+              li
+                .form-group
+                  input.form-control(type='', id='', placeholder='', name='')
+                  span.name-suffix Last
+            ul
+              li
+                .form-group
+                  label(for='email')
+                    | Email 
+                    span.star *
+                  input#email.form-control(type='email', placeholder='', name='email')
+                  span.name-suffix Enter Email
+              li
+                .form-group
+                  input#email.form-control(type='email', placeholder='', name='email')
+                  span.name-suffix Confirm Email
+            ul.address-width
+              li
+                .form-group
+                  label(for='email')
+                    | Address 
+                    span.star *
+                  input#email.form-control(type='email', placeholder='', name='email')
+                  span.name-suffix Street Address
+            ul
+              li
+                .form-group
+                  input#email.form-control(type='email', placeholder='', name='email')
+                  span.name-suffix City
+              li
+                .form-group
+                  input#email.form-control(type='email', placeholder='', name='email')
+                  span.name-suffix ZIP / Postal Code
+            ul
+              li
+                .form-group
+                  label(for='email')
+                    | Phone 
+                    span.star *
+                  input#email.form-control(type='email', placeholder='', name='email')
+            ul.what-search
+              li
+                .form-group
+                  label(for='email')
+                    | What search term did you use to find this website? 
+                    span.star *
+                  input#email.form-control(type='email', placeholder='', name='email')
+            ul.radio-call
+              li
+                label(for='email') Best time to call:
+                br
+                label.radio
+                  input(name='optradio', type='radio')
+                  | Morning
+                label.radio
+                  input(name='optradio', type='radio')
+                  | Afternoon
+                label.radio
+                  input(name='optradio', type='radio')
+                  | Evening
+            ul.what-search
+              li
+                .form-group
+                  label(for='email') Preferred days and time for the appointment:
+                  input#email.form-control(type='email', placeholder='', name='email')
+            ul.address-width
+              li
+                .form-group
+                  label(for='email')
+                    | Please tell us the reason for your visit, or if you have any questions or concerns about your dental health that you would like addressed during your visit.
+                  textarea#comment.form-control(rows='5', placeholder='This form uses email, which is not a secure form of communication. Please do not use this form to send confidential personal health information.')
+            ul.radio-call.radio-call-block
+              li
+                label(for='email')
+                  | Are you a new patient? 
+                  span.star *
+                br
+                label.radio
+                  input(name='optradio', type='radio')
+                  | Yes
+                label.radio
+                  input(name='optradio', type='radio')
+                  | No
+            ul.radio-call.radio-call-block
+              li
+                label(for='email') Did you check any online reviews to help you pick our dental office?
+                br
+                label.radio
+                  input(name='optradio', type='radio')
+                  | Yes
+                label.radio
+                  input(name='optradio', type='radio')
+                  | No
+            ul.radio-call.radio-call-block
+              li
+                label(for='email') Have you looked at our practice Facebook page yet?
+                br
+                label.radio
+                  input(name='optradio', type='radio')
+                  | Yes
+                label.radio
+                  input(name='optradio', type='radio')
+                  | No
+            ul.radio-call.radio-call-block
+              li
+                input.query-contact-pg-btn(value='submit', type='submit')
+    aside.content-sidebar-wrap.entry
+      .sidebar-pdg
+        #sidebar-box1.side-boxes
+          h3
+            | Darshan S. Naidu
+            br
+            | D.M.D.
+          hr
+          p
+            span#sidear-top-address 1906 59th St. West
+            br
+            span#sidear-top-address Suite H
+            span#sidear-top-address
+              br
+              | Bradenton FL, 34209
+            br
+            span#sidear-top-num01.exist-pat-num
+              | New patients call:
+              br
+              | (855)725-9467
+            br
+            span#sidear-top-num02.exist-pat-num
+              | All others call:
+              br
+              | (941)761-9603
+        #sidebar-box2.side-boxes
+          h3 Comprehensive Dental Care
+          p#sidebar-box2-text Restorative and preventive dentistry, implants and cosmetic services.
+          #sidebar-box2-button
+            a(href='#')
+              br
+              | REQUEST
+              br
+              | AN APPOINTMENT
+              br
+        #sidebar-box3.side-boxes
+          h3
+            | Map and
+            br
+            span.side-strong Directions
+          p
+            img(src='../../assets/images/naidu-dental-map.png')

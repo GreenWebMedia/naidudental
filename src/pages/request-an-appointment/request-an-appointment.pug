@@ -1,0 +1,179 @@
+.page-request-an-appointment
+  loader(v-if='loading')
+  section.inner-header(:style="{ backgroundImage: 'url('+ props.better_featured_image.source_url +')' }")
+    .inner-page-banner.inner-page-banner-description Quality dental care can transform your life.
+    .clearfix
+  section.site-wrapper
+    main.content-area
+      .content
+        article
+          h1.content-title Request an Appointment
+          .entry-content
+            p
+              | Thank you for your interest in Naidu Dental. Please fill out the form below and one of our staff members will set up a date and time convenient for you.
+            p
+              | We take measures to ensure that your privacy is protected. Please read our 
+              a(href='#') privacy policy
+              |  for more information.
+            form.form-main__form.wpcf7-form(@submit.prevent='validateBeforeSubmit', v-if='!formSubmitted', action='http://naidudental.rgwplogin.com/thankyou#wpcf7-f4-p226-o1', novalidate='novalidate', method='post')
+              input(type='hidden', name='_wpcf7', value='226')
+              input(type='hidden', name='_wpcf7_version', value='4.9')
+              input(type='hidden', name='_wpcf7_locale', value='en_US')
+              input(type='hidden', name='_wpcf7_unit_tag', value='wpcf7-f4-p226-o1')
+              input(type='hidden', name='_wpcf7_container_post', value='0')
+              ul
+                li
+                  .form-group
+                      label(for='')
+                       | Name 
+                      span.star *
+                      input(name='first-name', v-model='name', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('first-last') }", type='text').form-control
+                      span.name-suffix First
+                li
+                    input(name='last-name', v-model='last', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('first-last') }", type='text').form-control
+                    span.name-suffix Last
+              ul
+                li
+                  .form-group
+                    label(for='email')
+                      | Email 
+                      span.star *
+                    input(name='email-address', v-model='email', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('email-address') }", type='text').form-control
+                    span.name-suffix Enter Email
+                li
+                  .form-group
+                    input(name='confirm_email_address', v-model='confirm_email_address', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('confirm_email_address') }", type='text').form-control
+                    span.name-suffix Confirm Email
+              ul.address-width
+                li
+                  .form-group
+                    label(for='email')
+                      | Address 
+                      span.star *
+                    input(name='address', v-model='address', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('address') }", type='text').form-control
+                    span.name-suffix Street Address
+              ul
+                li
+                  .form-group
+                    input(name='city', v-model='city', :class="{ 'form-main__input--error': errors.has('city') }", type='text').form-control
+                    span.name-suffix City
+                li
+                  .form-group
+                    input(name='zip', v-model='zip', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('zip') }", type='text').form-control
+                    span.name-suffix ZIP / Postal Code
+              ul
+                li
+                  .form-group
+                    label(for='email')
+                      | Phone 
+                      span.star *
+                    input(name='phone', v-model='phone', v-validate="'required'", :class="{ 'form-main__input--error': errors.has('phone') }", type='text').form-control
+              ul.what-search
+                li
+                  .form-group
+                    label(for='email')
+                      | What search term did you use to find this website? 
+                      span.star *
+                    input(name='what_search', v-model='what_search', :class="{ 'form-main__input--error': errors.has('what_search') }", type='text').form-control
+              ul.radio-call
+                li
+                  label(for='email') Best time to call:
+                  br
+                  label.radio
+                    input(name='best_time_to_call', v-model='best_time_to_call', type='radio' value="Morning")
+                    | Morning
+                  label.radio
+                    input(name='best_time_to_call', v-model='best_time_to_call', type='radio' value="Afternoon")
+                    | Afternoon
+                  label.radio
+                    input(name='best_time_to_call', v-model='best_time_to_call', type='radio' value="Evening")
+                    | Evening
+              ul.what-search
+                li
+                  .form-group
+                    label(for='email') Preferred days and time for the appointment:
+                    input(name='preffered_days', v-model='preffered_days', :class=" { 'form-main__input--error': errors.has('preffered_days') }", type='text').form-control
+
+              ul.address-width
+                li
+                  .form-group
+                    label(for='email')
+                      | Please tell us the reason for your visit, or if you have any questions or concerns about your dental health that you would like addressed during your visit.
+              textarea(name='message', v-model='message', placeholder='This form uses email, which is not a secure form of communication. Please do not use this form to send confidential personal health information.')
+              ul.radio-call.radio-call-block
+                li
+                  label(for='email')
+                    | Are you a new patient? 
+                    span.star *
+                  br
+                  label.radio
+                    input(name='are_you_a_new_patient', v-model='are_you_a_new_patient', type='radio' value="Yes")
+                    | Yes
+                  label.radio
+                    input(name='are_you_a_new_patient', v-model='are_you_a_new_patient', type='radio' value="No")
+                    | No
+              ul.radio-call.radio-call-block
+                li
+                  label(for='email') Did you check any online reviews to help you pick our dental office?
+                  br
+                  label.radio
+                    input(name='did_you_check_any_online', v-model='did_you_check_any_online', type='radio' value="Yes")
+                    | Yes
+                  label.radio
+                    input(name='did_you_check_any_online', v-model='did_you_check_any_online', type='radio' value="No")
+                    | No
+              ul.radio-call.radio-call-block
+                li
+                  label(for='email') Have you looked at our practice Facebook page yet?
+                  br
+                  label.radio
+                    input(name='have_you_looked_at', v-model='have_you_looked_at', type='radio' value="Yes")
+                    | Yes
+                  label.radio
+                    input(name='have_you_looked_at', v-model='have_you_looked_at', type='radio' value="No")
+                    | No
+              ul.radio-call.radio-call-block
+                li
+                  input.query-contact-pg-btn(value='submit', type='submit')
+      aside.content-sidebar-wrap.entry
+        .sidebar-pdg
+          #sidebar-box1.side-boxes
+            h3
+              | Darshan S. Naidu
+              br
+              | D.M.D.
+            hr
+            p
+              span#sidear-top-address 1906 59th St. West
+              br
+              span#sidear-top-address Suite H
+              span#sidear-top-address
+                br
+                | Bradenton FL, 34209
+              br
+              span#sidear-top-num01.exist-pat-num
+                | New patients call:
+                br
+                | (855)725-9467
+              br
+              span#sidear-top-num02.exist-pat-num
+                | All others call:
+                br
+                | (941)761-9603
+          #sidebar-box2.side-boxes
+            h3 Comprehensive Dental Care
+            p#sidebar-box2-text Restorative and preventive dentistry, implants and cosmetic services.
+            #sidebar-box2-button
+              a(href='#')
+                br
+                | REQUEST
+                br
+                | AN APPOINTMENT
+                br
+          #sidebar-box3.side-boxes
+            h3
+              | Map and
+              br
+              span.side-strong Directions
+            p
+              img(src='../../assets/images/naidu-dental-map.png')

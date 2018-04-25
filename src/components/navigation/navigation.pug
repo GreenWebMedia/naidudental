@@ -1,0 +1,138 @@
+main
+  span.mobile-nav-btn.idw-icon-menu(onclick='openNav()')
+  #mySidenav.sidenav
+    a.closebtn.idw-icon-close(href='javascript:void(0)', onclick='closeNav()')
+    ul
+      li
+        router-link(to='/') Home
+      li.has-submenu
+        router-link(to='/#')  About Us
+        ul.sidenav-submenu
+          li
+            router-link(to='/meet-dr-darshan-naidu') Meet Dr. Darshan Naidu
+          li
+            router-link(to='/request-an-appointment') Request an Appointment
+          li
+            router-link(to='/map-to-our-office') Map to Our Office
+          li
+            router-link(to='/new-patient-forms') New Patient Forms
+          li
+            router-link(to='/financial-policies') Financial Policies
+          li
+            router-link(to='/privacy-policy') Privacy Policy
+      li.has-submenu
+        router-link(to='/#') Cosmetic Services
+        ul.sidenav-submenu
+          li
+            router-link(to='/teeth-whitening') Teeth Whitening
+          li
+            router-link(to='/invisalign') Invisalign
+          li
+            router-link(to='/botox') Botox
+          li
+            router-link(to='/other-services') Smile Makeovers
+          li
+            router-link(to='/other-services#porcelain') Porcelain Veneers
+          li
+            router-link(to='/other-services#white-fillings') White Fillings
+      li.has-submenu
+        a(href='#') Missing Teeth
+        ul.sidenav-submenu
+          li
+            router-link(to='/dental-implants') Dental Implants
+          li
+            router-link(to='/bradenton-dentures') Dentures
+          li
+            router-link(to='/other-services/#bridges') Dental Bridges
+      li.has-submenu
+        router-link(to='/#') Other Services
+        ul.sidenav-submenu
+          li
+            router-link(to='/sedation-dentist') Sedation Dentistry
+          li
+            router-link(to='/emergency-dentist') Emergency Dentistry
+          li
+            router-link(to='/other-services/#extractions') Extractions
+          li
+            router-link(to='/other-services/#crowns') Dental Crowns
+          li
+            router-link(to='/other-services/#root-canal') Root Canal Therapy
+      li
+        router-link(to='/contact-us') Contact Us
+  span.mobile-call.idw-icon-phone(onclick='openCall()')
+  #mySidecall.sidecall
+    a.closebtn.idw-icon-close(href='javascript:void(0)', onclick='closeCall()')
+    ul
+      li
+        a(id='', href='tel:8557259467') New Patient
+      li
+        a(id='', href='tel:9417619603') Existing Patient
+  nav#nav
+    .container
+      .row
+        .col-sm-12
+          .main-nav
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navbar-collapse-1')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            #navbar-collapse-1.collapse.navbar-collapse
+              ul#main-nav.nav.navbar-nav
+                li.active
+                    router-link(to='/') Home
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') About Us
+                  ul.dropdown-menu.sub-menu
+                    li
+                       router-link(to='/meet-dr-darshan-naidu') Meet Dr. Darshan Naidu
+                    li
+                      router-link(to='/request-an-appointment') Request an Appointment
+                    li
+                      router-link(to='/map-to-our-office') Map to Our Office
+                    li
+                      router-link(to='/new-patient-forms') New Patient Forms
+                    li
+                      router-link(to='/financial-policies') Financial Policies
+                    li
+                      router-link(to='/privacy-policy') Privacy Policy
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Cosmetic Services
+                  ul.dropdown-menu.sub-menu
+                    li
+                      router-link(to='/teeth-whitening') Teeth Whitening
+                    li
+                      router-link(to='/invisalign') Invisalign
+                    li
+                      router-link(to='/botox') Botox
+                    li
+                      router-link(to='/other-services') Smile Makeovers
+                    li
+                      router-link(to='/other-services#porcelain') Porcelain Veneers
+                    li
+                      router-link(to='/other-services#white-fillings') White Fillings
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Missing Teeth
+                  ul.dropdown-menu.sub-menu
+                    li
+                      router-link(to='/dental-implants') Dental Implants
+                    li
+                      router-link(to='/bradenton-dentures') Dentures
+                    li
+                      router-link(to='/other-services/#bridges') Dental Bridges
+                li.dropdown
+                  a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false') Other Services
+                  ul.dropdown-menu.sub-menu
+                    li
+                      router-link(to='/sedation-dentist') Sedation Dentistry
+                    li
+                      router-link(to='/emergency-dentist') Emergency Dentistry
+                    li
+                      router-link(to='/other-services/#extractions') Extractions
+                    li
+                      router-link(to='/other-services/#crowns') Dental Crowns
+                    li
+                      router-link(to='/other-services/#root-canal') Root Canal Therapy
+                li
+                  router-link(to='/contact-us') Contact Us

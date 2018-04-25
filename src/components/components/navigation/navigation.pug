@@ -1,0 +1,22 @@
+nav.nav-desktop(v-if='props')
+  .nav-desktop__container
+    router-link(to='/').nav-desktop__logo
+      Icon.nav-desktop__logo-icon(name='razi_logo')
+    .nav-desktop__navbar  
+      router-link.nav-desktop__link(
+        v-for='(nav, i) in links'
+        v-if='nav.navigation'
+        :key='i'
+        :to='nav.path')
+          | {{ nav.name }}
+          .nav-desktop__dropdown(v-if='nav.children')
+            router-link.nav-desktop__drop-link(
+              v-for='(item, i) in nav.children'
+              v-html='item.label'
+              :to='item.path',
+              :key='i')
+    .nav-desktop__button-group
+      a.nav-desktop__phone(:href="'tel:+' + props.acf.information.phone")
+        | {{ props.acf.information.phone }}
+      .nav-desktop__req-button(@click='openModal')
+        Icon.nav-desktop__req-button-icon(name='finger')

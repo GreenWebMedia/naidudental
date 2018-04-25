@@ -1,0 +1,90 @@
+.page-contact-us
+  Loader(v-if='loading')
+  section.inner-header(:style="{ backgroundImage: 'url('+ props.better_featured_image.source_url +')' }")
+   .inner-page-banner.inner-page-banner-description Quality dental care can transform your life.
+   .clearfix
+  section.site-wrapper
+   main.content-area
+    .content
+      article
+        h1.content-title Contact Us
+        .entry-content
+          p
+            | Dr. Darshan Naidu is located at
+            br
+            | 1906-H 59th Street West
+            br
+            | Bradenton, FL 34209
+            br
+            | Click here for a 
+            a(data-toggle='modal', data-target='#view-mapx', class='pop_menu')  Map to Our Office
+            |
+          p
+            | Our office hours are
+            br
+            | Monday through Thursday
+            br
+            | 8 am to 5 pm.
+          p
+            | If you are a new patient, please call
+            br
+            | (855) 725-9467.
+            br
+            | All others please call
+            br
+            | (941) 761-9603.
+          p
+            | You can also request an appointment by filling out our 
+            router-link(to='/request-an-appointment') Request an Appointment
+            |  page. If you’d like to meet Dr. Naidu and his staff before committing to a full exam, we can set you up with a complimentary consultation—just ask.
+    aside.content-sidebar-wrap.entry
+      .sidebar-pdg
+        #sidebar-box1.side-boxes
+          h3
+            | Darshan S. Naidu
+            br
+            | D.M.D.
+          hr
+          p
+            span#sidear-top-address 1906 59th St. West
+            br
+            span#sidear-top-address Suite H
+            span#sidear-top-address
+              br
+              | Bradenton FL, 34209
+            br
+            span#sidear-top-num01.exist-pat-num
+              | New patients call:
+              br
+              | (855)725-9467
+            br
+            span#sidear-top-num02.exist-pat-num
+              | All others call:
+              br
+              | (941)761-9603
+        #sidebar-box2.side-boxes
+          h3 Comprehensive Dental Care
+          p#sidebar-box2-text Restorative and preventive dentistry, implants and cosmetic services.
+          #sidebar-box2-button
+            a(href='#')
+              br
+              | REQUEST
+              br
+              | AN APPOINTMENT
+              br
+        #sidebar-box3.side-boxes
+          h3
+            | Map and
+            br
+            span.side-strong Directions
+          p
+            img(src='../../assets/images/naidu-dental-map.png')
+            #view-mapx.modal.fade(role='dialog')
+              .modal-dialog.modal-lg
+                // Modal content
+                .modal-content
+                  .modal-header
+                    button.close(type='button', data-dismiss='modal') &times;
+                  .modal-body
+                    p
+                      iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7079.01120921605!2d-82.62482402947357!3d27.48464707709774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c316e63f3e51eb%3A0xd85d5ad0deb06162!2sDarshan+S.+Naidu+DMD!5e0!3m2!1sen!2sus!4v1521138189817', style='border:0;', allowfullscreen='', width='', height='', frameborder='0')

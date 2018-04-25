@@ -1,0 +1,76 @@
+.page-meet-dr-darshan-naidu
+  Loader(v-if='loading')
+  section.inner-header
+   .inner-page-banner.inner-page-banner-description Quality dental care can transform your life.
+   .clearfix
+  section.site-wrapper
+  main.content-area
+    .content
+      article
+        h1.content-title {{props.title.rendered}}
+        .entry-content
+          p 
+            img.alignleft.img-fl(:src='props.acf.profile_picture.url', alt='', width='', height='')
+            | {{props.acf.description}}
+          h2 {{props.acf.second_heading}}
+          p
+            | {{props.acf.second_description}}
+          p
+            | {{props.acf.paragraph_2}}
+          h2  {{props.acf.third_heading}}
+          p
+            | {{props.acf.third_description}}
+          p
+            | {{props.acf.Paragraphthird_2}}
+          p
+            | {{props.acf.Paragraphthird_3}}
+          h2 {{props.acf.fourth_heading}}
+          p
+            | {{props.acf.fourth_description}}
+          p {{props.acf.fourth_description2}}
+          p {{props.acf.fourth_description3}}
+    aside.content-sidebar-wrap.entry
+      .sidebar-pdg
+        #sidebar-box1.side-boxes
+          h3
+            | Darshan S. Naidu
+            br
+            | D.M.D.
+          hr
+          p
+            span#sidear-top-address 1906 59th St. West
+            br
+            span#sidear-top-address Suite H
+            span#sidear-top-address
+              br
+              | Bradenton FL, 34209
+            br
+            span#sidear-top-num01.exist-pat-num
+              | New patients call:
+              br
+              | (855)725-9467
+            br
+            span#sidear-top-num02.exist-pat-num
+              | All others call:
+              br
+              | (941)761-9603
+        #sidebar-box2.side-boxes
+          h3 Comprehensive Dental Care
+          p#sidebar-box2-text Restorative and preventive dentistry, implants and cosmetic services.
+          #sidebar-box2-button
+            a(href='#')
+              br
+              | REQUEST
+              br
+              | AN APPOINTMENT
+              br
+        #sidebar-box3.side-boxes
+          h3
+            | Map and
+            br
+            span.side-strong Directions
+          p
+            img(src='../../assets/images/naidu-dental-map.png')
+
+
+  
